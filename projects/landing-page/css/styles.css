@@ -8,16 +8,14 @@
  *
 */
 
-
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
+    /* background: rgb(136,203,171); */
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
 
 /* Typeography General*/
 h1 {
@@ -35,7 +33,7 @@ h1 {
 
 h2 {
     border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
+    font-family: 'Oxygen', sans-serif;
     font-size: 3em;
     color: #fff;
 }
@@ -58,43 +56,94 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    transition: ease 0.4s;
+    transition-delay: 0.1s;
 }
-
 
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+.navbar__menu {
+    /* display: none; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: rgba(0,13,60,1);
+    height: auto;
+    transform: translateY(-150%);
+    transition: ease 0.6s;
+}
+
 .navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center ;
 }
 
 .navbar__menu li {
-    display: inline-block;
+    font-family: 'Quicksand', sans-serif;
+    list-style-type: none;
+    margin: 0 1em;
+    color: gray;
+    font-size: large;
+    align-self: center;
+    transition: ease 0.3s;
 }
 
-.navbar__menu .menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+.navbar__menu li:hover {
+    color: white;
+    transition: ease 0.3s;
+    cursor: pointer;
 }
 
-.navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
+.navbar__menu .nav__active {
+    color: white;
+    font-size: x-large;
+    transition: ease 0.3s;  
+}
+
+
+#return__button {
+    /* content: '\02C4'; */
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    z-index: 99;
+    font-size: 20pt;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+    padding: 0.2em;
+    border-radius: 1em;
+    box-shadow: 0px 0px 10px rgba(92, 92, 92);
+    transition: ease 0.3s;
+    background-color: gray;
+}
+#return__button:hover {
+    /* ⇪ */
+    /* background-color: salmon; */
+    height: 80px;
+    font-size: 30pt;
+    transition: ease 0.3s;
 }
 
 /* Header Styles */
 .page__header {
-    background: #fff;
+    /* background-color: rgb(44,44,44); */
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 5;
+}
+
+.page__header:hover .navbar__menu {
+    transform: translateY(0); 
 }
 
 /* Footer Styles */
@@ -107,7 +156,6 @@ section {
 .page__footer p{
     color: #fff;
 }
-
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
@@ -125,7 +173,7 @@ section {
 
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
-    margin-left: auto;
+    margin-left: auto; 
     text-align: right; 
 }
 
@@ -142,6 +190,7 @@ section:nth-of-type(odd) .landing__container::before {
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
+    /* border: 1px solid red; */
 }
 
 section:nth-of-type(even) .landing__container::before {
@@ -157,6 +206,7 @@ section:nth-of-type(even) .landing__container::before {
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
+    /* border: 1px solid red; */
 }
 
 section:nth-of-type(3n) .landing__container::after {
@@ -172,6 +222,7 @@ section:nth-of-type(3n) .landing__container::after {
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
+    /* border: 1px solid red; */
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
@@ -187,15 +238,23 @@ section:nth-of-type(3n + 1) .landing__container::after {
     border-radius: 50%;
     opacity: 0;
     transition: ease 0.5s all;
+    /* border: 1px solid red; */
 }
-
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    /* background: rgb(0, 0, 0); */
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%); */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(92, 92, 92, 0.836);
+    transition: ease 0.4s;
+    transition-delay: 0.1s;
+
+
+    /* transition: ease 0.1s; */
 }
 
 section.your-active-class .landing__container::before {

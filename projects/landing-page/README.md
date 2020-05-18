@@ -6,8 +6,13 @@
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+#### Added features include:
 
-To get started, open `js/app.js` and start building out the app's functionality
+- Dynamically built navigation bar
+- Checking which element is in view
+- Setting section in view as active, as well as corresponding navigation <li> item. 
+- Using JS to scroll to section selected by clicking navigation bar
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+*Bonus features*
+- Only show navigation bar when hover, or on top of page
+- A button fixed to bottom right corner that returns you to top of page. 
